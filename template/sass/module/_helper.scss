@@ -5,8 +5,7 @@
     background-color: transparent;
     border: 0;
     overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
+    *text-indent: -9999px; /* IE 6/7 fallback */
 }
 
 .ir:before {
@@ -70,10 +69,8 @@
  *    `:before` to contain the top-margins of child elements.
  */
 .clearfix:before, .clearfix:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
 .clearfix:after {
