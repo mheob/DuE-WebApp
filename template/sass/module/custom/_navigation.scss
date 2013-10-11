@@ -1,0 +1,55 @@
+/**
+  * Nav
+  */
+* html li li {
+    display: inline; /* IE6 Bugfix... */
+}
+
+#mainnav {
+    background-color: #999;
+    margin: 1.5em -2em 0 -2em;
+    ul {
+        margin: 0 auto;
+        line-height: 2.5em;
+        padding: 0 4%;
+        li {
+            display: inline-block;
+            width: 24.5%;
+            &:not(:last-child) {
+                border-right: 1px solid white;
+            }
+            a {
+                color: white;
+                font-size: 1.3em;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                &:hover {
+                    color: #ddd;
+                }
+            }
+            ul {
+                display: none;
+                position: absolute;
+                z-index: 999;
+                width: 100%;
+                padding: 0;
+                li {
+                    background: #999 !important;
+                    display: block;
+                    border-top: 1px solid white;
+                    border-right: none !important;
+                    padding: 0.3em 1em;
+                    width: 13.5em;
+                    a {
+                        font-size: 1em;
+                        text-align: left;
+                        line-height: 1.2em;
+                        display: block;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

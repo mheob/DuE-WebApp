@@ -1,0 +1,91 @@
+/**
+  * Sector for weights-calculator
+  */
+#overview {
+    ul {
+        min-height: 36em;
+        li {
+            float: left;
+            width: 32%;
+            height: 12em;
+            text-align: center;
+            border-right: 2px dashed #555;
+            border-top: 2px dashed #555;
+            list-style-type: none;
+            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                border-top: none;
+            }
+            &:nth-child(3n) {
+                border-right: none;
+            }
+            a {
+                color: #008;
+                font-weight: bold;
+                text-decoration: none;
+                &:hover {
+                    color: #555;
+                }
+            }
+        }
+    }
+}
+
+@import "validation/*.png";
+
+#weights {
+    label, input, select, output {
+        margin: 0.5em 0;
+        width: 40%;
+    }
+    label {
+        padding-left: 1em;
+        width: 55%;
+        display: block;
+        clear: left;
+        float: left;
+    }
+    input {
+        border-radius: 5px;
+    }
+    .button {
+        text-align: center;
+    }
+    input[type=submit] {
+        display: block;
+        margin: 1em auto 0;
+        padding: 0.2em;
+        width: 8em;
+        border-radius: 5px;
+    }
+    output {
+        display: inline-block;
+        width: 45%;
+    }
+    .result {
+        border-top: 2px solid grey;
+        padding-top: 0.5em;
+        font-style: italic;
+        font-weight: bold;
+    }
+    .short {
+        width: 4em;
+    }
+    input[type=text]:required:valid, select:required:valid {
+        @include validation-sprite(valid, $offset-x: 100%);
+        box-shadow: 0 0 4px green;
+    }
+    input[type=text]:required:invalid, select:required:invalid {
+        @include validation-sprite(invalid, $offset-x: 100%);
+        box-shadow: 0 0 4px red;
+    }
+    select:required:valid, select:required:invalid {
+        background: none;
+    }
+}
+
+.weights-calculator figure {
+    height: 100%;
+    width: 100%;
+    padding-top: 1em;
+    text-align: center;
+}

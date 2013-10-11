@@ -1,0 +1,66 @@
+/**
+  * General and Body
+  */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+}
+
+.lc, .rc {
+    float: left;
+    width: 50%;
+    padding-top: 2em;
+}
+
+/**
+  * Page definitions
+  */
+#page {
+    padding: 2em;
+    width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    border-left: $base-border;
+    border-right: $base-border;
+}
+
+/**
+  * Header definitions
+  */
+#mainheader {
+    div {
+        width: 60%;
+        height: 5em;
+        float: left;
+    }
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    a {
+        color: #555;
+        text-decoration: none;
+    }
+
+    figure {
+        float: right;
+        background: url(../img/logo.png) no-repeat center center;
+        height: 5em;
+        width: 30%;
+    }
+}
+
+/**
+  * Footer definitions
+  */
+footer {
+    background-color: #555;
+    color: silver;
+    border-top: $base-border;
+    line-height: 4em;
+    text-align: center;
+}

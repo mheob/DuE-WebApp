@@ -1,0 +1,1022 @@
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 8, ../sass/module/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 15, ../sass/module/_normalize.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 25, ../sass/module/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 34, ../sass/module/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 48, ../sass/module/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 61, ../sass/module/_normalize.scss */
+html, button, input, select, textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+/* line 68, ../sass/module/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 79, ../sass/module/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 86, ../sass/module/_normalize.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 99, ../sass/module/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 104, ../sass/module/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 109, ../sass/module/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 114, ../sass/module/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 119, ../sass/module/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 124, ../sass/module/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 132, ../sass/module/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 139, ../sass/module/_normalize.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 143, ../sass/module/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 150, ../sass/module/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 158, ../sass/module/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+/* line 167, ../sass/module/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 175, ../sass/module/_normalize.scss */
+p, pre {
+  margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 182, ../sass/module/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 191, ../sass/module/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+/* line 200, ../sass/module/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+/* line 207, ../sass/module/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 215, ../sass/module/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 222, ../sass/module/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 229, ../sass/module/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 233, ../sass/module/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 244, ../sass/module/_normalize.scss */
+dl, menu, ol, ul {
+  margin: 1em 0;
+}
+
+/* line 248, ../sass/module/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 255, ../sass/module/_normalize.scss */
+menu, ol, ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 262, ../sass/module/_normalize.scss */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 275, ../sass/module/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 285, ../sass/module/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 296, ../sass/module/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 307, ../sass/module/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 314, ../sass/module/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 325, ../sass/module/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+/* line 341, ../sass/module/_normalize.scss */
+button, input, select, textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 356, ../sass/module/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 366, ../sass/module/_normalize.scss */
+button, select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 381, ../sass/module/_normalize.scss */
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 393, ../sass/module/_normalize.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 403, ../sass/module/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 419, ../sass/module/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 432, ../sass/module/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 439, ../sass/module/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 448, ../sass/module/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 462, ../sass/module/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 478, ../sass/module/_normalize.scss */
+html, button, input, select, textarea {
+  color: #222;
+}
+
+/* line 482, ../sass/module/_normalize.scss */
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 492, ../sass/module/_normalize.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 497, ../sass/module/_normalize.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 505, ../sass/module/_normalize.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 518, ../sass/module/_normalize.scss */
+audio, canvas, img, video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 525, ../sass/module/_normalize.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 534, ../sass/module/_normalize.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+/* line 541, ../sass/module/_normalize.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/**
+  * General and Body
+  */
+/* line 4, ../sass/module/custom/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, ../sass/module/custom/_base.scss */
+body {
+  background-color: #ddd;
+}
+
+/* line 12, ../sass/module/custom/_base.scss */
+.lc, .rc {
+  float: left;
+  width: 50%;
+  padding-top: 2em;
+}
+
+/**
+  * Page definitions
+  */
+/* line 21, ../sass/module/custom/_base.scss */
+#page {
+  padding: 2em;
+  width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  border-left: 2px solid #999999;
+  border-right: 2px solid #999999;
+}
+
+/**
+  * Header definitions
+  */
+/* line 34, ../sass/module/custom/_base.scss */
+#mainheader div {
+  width: 60%;
+  height: 5em;
+  float: left;
+}
+/* line 40, ../sass/module/custom/_base.scss */
+#mainheader h1, #mainheader h2 {
+  margin: 0;
+}
+/* line 44, ../sass/module/custom/_base.scss */
+#mainheader a {
+  color: #555;
+  text-decoration: none;
+}
+/* line 49, ../sass/module/custom/_base.scss */
+#mainheader figure {
+  float: right;
+  background: url(../img/logo.png) no-repeat center center;
+  height: 5em;
+  width: 30%;
+}
+
+/**
+  * Footer definitions
+  */
+/* line 60, ../sass/module/custom/_base.scss */
+footer {
+  background-color: #555;
+  color: silver;
+  border-top: 2px solid #999999;
+  line-height: 4em;
+  text-align: center;
+}
+
+/**
+  * Nav
+  */
+/* line 4, ../sass/module/custom/_navigation.scss */
+* html li li {
+  display: inline;
+  /* IE6 Bugfix... */
+}
+
+/* line 8, ../sass/module/custom/_navigation.scss */
+#mainnav {
+  background-color: #999;
+  margin: 1.5em -2em 0 -2em;
+}
+/* line 11, ../sass/module/custom/_navigation.scss */
+#mainnav ul {
+  margin: 0 auto;
+  line-height: 2.5em;
+  padding: 0 4%;
+}
+/* line 15, ../sass/module/custom/_navigation.scss */
+#mainnav ul li {
+  display: inline-block;
+  width: 24.5%;
+}
+/* line 18, ../sass/module/custom/_navigation.scss */
+#mainnav ul li:not(:last-child) {
+  border-right: 1px solid white;
+}
+/* line 21, ../sass/module/custom/_navigation.scss */
+#mainnav ul li a {
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+/* line 27, ../sass/module/custom/_navigation.scss */
+#mainnav ul li a:hover {
+  color: #ddd;
+}
+/* line 31, ../sass/module/custom/_navigation.scss */
+#mainnav ul li ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  padding: 0;
+}
+/* line 37, ../sass/module/custom/_navigation.scss */
+#mainnav ul li ul li {
+  background: #999 !important;
+  display: block;
+  border-top: 1px solid white;
+  border-right: none !important;
+  padding: 0.3em 1em;
+  width: 13.5em;
+}
+/* line 44, ../sass/module/custom/_navigation.scss */
+#mainnav ul li ul li a {
+  font-size: 1em;
+  text-align: left;
+  line-height: 1.2em;
+  display: block;
+  margin-right: 0;
+}
+
+/**
+  * Sector for weights-calculator
+  */
+/* line 5, ../sass/module/custom/_weights.scss */
+#overview ul {
+  min-height: 36em;
+}
+/* line 7, ../sass/module/custom/_weights.scss */
+#overview ul li {
+  float: left;
+  width: 32%;
+  height: 12em;
+  text-align: center;
+  border-right: 2px dashed #555;
+  border-top: 2px dashed #555;
+  list-style-type: none;
+}
+/* line 15, ../sass/module/custom/_weights.scss */
+#overview ul li:nth-child(1), #overview ul li:nth-child(2), #overview ul li:nth-child(3) {
+  border-top: none;
+}
+/* line 18, ../sass/module/custom/_weights.scss */
+#overview ul li:nth-child(3n) {
+  border-right: none;
+}
+/* line 21, ../sass/module/custom/_weights.scss */
+#overview ul li a {
+  color: #008;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 25, ../sass/module/custom/_weights.scss */
+#overview ul li a:hover {
+  color: #555;
+}
+
+/* line 50, validation/*.png */
+.validation-sprite, #weights input[type=text]:required:valid, #weights select:required:valid, #weights input[type=text]:required:invalid, #weights select:required:invalid {
+  background: url('../img/validation-s7f020a2507.png') no-repeat;
+}
+
+/* line 36, ../sass/module/custom/_weights.scss */
+#weights label, #weights input, #weights select, #weights output {
+  margin: 0.5em 0;
+  width: 40%;
+}
+/* line 40, ../sass/module/custom/_weights.scss */
+#weights label {
+  padding-left: 1em;
+  width: 55%;
+  display: block;
+  clear: left;
+  float: left;
+}
+/* line 47, ../sass/module/custom/_weights.scss */
+#weights input {
+  border-radius: 5px;
+}
+/* line 50, ../sass/module/custom/_weights.scss */
+#weights .button {
+  text-align: center;
+}
+/* line 53, ../sass/module/custom/_weights.scss */
+#weights input[type=submit] {
+  display: block;
+  margin: 1em auto 0;
+  padding: 0.2em;
+  width: 8em;
+  border-radius: 5px;
+}
+/* line 60, ../sass/module/custom/_weights.scss */
+#weights output {
+  display: inline-block;
+  width: 45%;
+}
+/* line 64, ../sass/module/custom/_weights.scss */
+#weights .result {
+  border-top: 2px solid grey;
+  padding-top: 0.5em;
+  font-style: italic;
+  font-weight: bold;
+}
+/* line 70, ../sass/module/custom/_weights.scss */
+#weights .short {
+  width: 4em;
+}
+/* line 73, ../sass/module/custom/_weights.scss */
+#weights input[type=text]:required:valid, #weights select:required:valid {
+  background-position: 100% -18px;
+  box-shadow: 0 0 4px green;
+}
+/* line 77, ../sass/module/custom/_weights.scss */
+#weights input[type=text]:required:invalid, #weights select:required:invalid {
+  background-position: 100% 0;
+  box-shadow: 0 0 4px red;
+}
+/* line 81, ../sass/module/custom/_weights.scss */
+#weights select:required:valid, #weights select:required:invalid {
+  background: none;
+}
+
+/* line 86, ../sass/module/custom/_weights.scss */
+.weights-calculator figure {
+  height: 100%;
+  width: 100%;
+  padding-top: 1em;
+  text-align: center;
+}
+
+/*
+ * Image replacement
+ */
+/* line 4, ../sass/module/_helper.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 12, ../sass/module/_helper.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 22, ../sass/module/_helper.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 30, ../sass/module/_helper.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 45, ../sass/module/_helper.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 57, ../sass/module/_helper.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 72, ../sass/module/_helper.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 79, ../sass/module/_helper.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 87, ../sass/module/_helper.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+@media print {
+  /* line 2, ../sass/module/_print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 9, ../sass/module/_print.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 12, ../sass/module/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 15, ../sass/module/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 21, ../sass/module/_print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 24, ../sass/module/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 28, ../sass/module/_print.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 32, ../sass/module/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 35, ../sass/module/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 41, ../sass/module/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 45, ../sass/module/_print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
