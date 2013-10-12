@@ -84,7 +84,7 @@ class Flatsteel extends Form
 
             if ($call == "1")
             {
-                $out .= "\t\t    " . '<label for="weight" class="result">' . $this->weight_all_weight . '</label>' . "\n";
+                $out .= "\t\t    " . '<label for="weight" class="result">' . $this->lang->get("Weight.All.weight") . '</label>' . "\n";
                 $out .= "\t\t    " . '<output id="weight" class="result">' . $this->calc->weight_fs($this->w, $this->t, $this->l, $this->sw, $this->p) . '</output>' . "\n";
             }
         }
@@ -95,7 +95,7 @@ class Flatsteel extends Form
         /* right column */
         $out .= "\t    " . '<div class="rc">' . "\n";
         $out .= "\t\t" . '<figure>' . "\n";
-        $out .= "\t\t    " . '<img src="' . $this->weight_output_fs_img . '" alt="' . $this->weight_output_fs . '">' . "\n";
+        $out .= "\t\t    " . '<img src="' . $this->lang->get("Weight.Output.fs_img") . '" alt="' . $this->lang->get("Weight.Output.fs") . '">' . "\n";
         $out .= "\t\t" . '</figure>' . "\n";
         $out .= "\t    " . '</div><!-- .rc -->' . "\n";
         $out .= "\t" . '</div><!-- .weights-calculator -->' . "\n";

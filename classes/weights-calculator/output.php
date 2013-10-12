@@ -14,7 +14,7 @@
 
 namespace WebApp\Classes\WeightsCalculator;
 
-require_once(__DIR__ . "/../../lang/de/text.php");
+require_once(__DIR__ . "/../../lang/language.php");
 require_once(__DIR__ . "/anglesteel.php");
 require_once(__DIR__ . "/circular_hollow_section.php");
 require_once(__DIR__ . "/flatsteel.php");
@@ -34,7 +34,7 @@ use WebApp\Lang as LANG;
  */
 class Weights_calculator_output
 {
-    private $text;
+    private $lang;
     private $as;
     private $chs;
     private $fs;
@@ -50,7 +50,18 @@ class Weights_calculator_output
      */
     public function __construct()
     {
-        $this->text = new LANG\Text();
+        try
+        {
+            $this->lang = LANG\Language::getInstance();
+            $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+            $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+            $this->lang->setDefault('de');
+            $this->lang->setLanguage('de');
+        }
+        catch (LANG\LanguageException $e)
+        {
+            echo $e->getMessage();
+        }
     }
 
     /**
@@ -62,15 +73,15 @@ class Weights_calculator_output
     {
         $out = '	<div id="overview">' . "\n";
         $out .= '	    <ul>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_fs_href . '"><img alt="' . $this->text->weight_output_fs . '" src="' . $this->text->weight_output_fs_img . '"><br>' . $this->text->weight_output_fs . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_shs_href . '"><img alt="' . $this->text->weight_output_shs . '" src="' . $this->text->weight_output_shs_img . '"><br>' . $this->text->weight_output_shs . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_rhs_href . '"><img alt="' . $this->text->weight_output_rhs . '" src="' . $this->text->weight_output_rhs_img . '"><br>' . $this->text->weight_output_rhs . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_chs_href . '"><img alt="' . $this->text->weight_output_chs . '" src="' . $this->text->weight_output_chs_img . '"><br>' . $this->text->weight_output_chs . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_rs_href . '"><img alt="' . $this->text->weight_output_rs . '" src="' . $this->text->weight_output_rs_img . '"><br>' . $this->text->weight_output_rs . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_hs_href . '"><img alt="' . $this->text->weight_output_hs . '" src="' . $this->text->weight_output_hs_img . '"><br>' . $this->text->weight_output_hs . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_us_href . '"><img alt="' . $this->text->weight_output_us . '" src="' . $this->text->weight_output_us_img . '"><br>' . $this->text->weight_output_us . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_ss_href . '"><img alt="' . $this->text->weight_output_ss . '" src="' . $this->text->weight_output_ss_img . '"><br>' . $this->text->weight_output_ss . '</a></li>' . "\n";
-        $out .= '	        <li><a href="' . $this->text->weight_output_as_href . '"><img alt="' . $this->text->weight_output_as . '" src="' . $this->text->weight_output_as_img . '"><br>' . $this->text->weight_output_as . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=fs"><img alt="' . $this->lang->get("Weight.Output.fs") . '" src="' . $this->lang->get("Weight.Output.fs_img") . '"><br>' . $this->lang->get("Weight.Output.fs") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=shs"><img alt="' . $this->lang->get("Weight.Output.shs") . '" src="' . $this->lang->get("Weight.Output.shs_img") . '"><br>' . $this->lang->get("Weight.Output.shs") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=rhs"><img alt="' . $this->lang->get("Weight.Output.rhs") . '" src="' . $this->lang->get("Weight.Output.rhs_img") . '"><br>' . $this->lang->get("Weight.Output.rhs") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=chs"><img alt="' . $this->lang->get("Weight.Output.chs") . '" src="' . $this->lang->get("Weight.Output.chs_img") . '"><br>' . $this->lang->get("Weight.Output.chs") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=rs"><img alt="' . $this->lang->get("Weight.Output.rs") . '" src="' . $this->lang->get("Weight.Output.rs_img") . '"><br>' . $this->lang->get("Weight.Output.rs") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=hs"><img alt="' . $this->lang->get("Weight.Output.hs") . '" src="' . $this->lang->get("Weight.Output.hs_img") . '"><br>' . $this->lang->get("Weight.Output.hs") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=us"><img alt="' . $this->lang->get("Weight.Output.us") . '" src="' . $this->lang->get("Weight.Output.us_img") . '"><br>' . $this->lang->get("Weight.Output.us") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=ss"><img alt="' . $this->lang->get("Weight.Output.ss") . '" src="' . $this->lang->get("Weight.Output.ss_img") . '"><br>' . $this->lang->get("Weight.Output.ss") . '</a></li>' . "\n";
+        $out .= '	        <li><a href="index.php?main=weights-calculator&shape=as"><img alt="' . $this->lang->get("Weight.Output.as") . '" src="' . $this->lang->get("Weight.Output.as_img") . '"><br>' . $this->lang->get("Weight.Output.as") . '</a></li>' . "\n";
         $out .= '	    </ul>' . "\n";
         $out .= '	</div>' . "\n";
 

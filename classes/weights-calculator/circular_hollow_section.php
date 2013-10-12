@@ -82,7 +82,7 @@ class Circular_hollow_section extends Form
 
             if ($call == "1")
             {
-                $out .= "\t\t    " . '<label for="weight" class="result">' . $this->weight_all_weight . '</label>' . "\n";
+                $out .= "\t\t    " . '<label for="weight" class="result">' . $this->lang->get("Weight.All.weight") . '</label>' . "\n";
                 $out .= "\t\t    " . '<output id="weight" class="result">' . $this->calc->weight_chs($this->odia, $this->idia, $this->l, $this->sw, $this->p) . '</output>' . "\n";
             }
         }
@@ -93,7 +93,7 @@ class Circular_hollow_section extends Form
         /* right column */
         $out .= "\t    " . '<div class="rc">' . "\n";
         $out .= "\t\t" . '<figure>' . "\n";
-        $out .= "\t\t    " . '<img src="' . $this->weight_output_chs_img . '" alt="' . $this->weight_output_chs . '">' . "\n";
+        $out .= "\t\t    " . '<img src="' . $this->lang->get("Weight.Output.chs_img") . '" alt="' . $this->lang->get("Weight.Output.chs") . '">' . "\n";
         $out .= "\t\t" . '</figure>' . "\n";
         $out .= "\t    " . '</div><!-- .rc -->' . "\n";
         $out .= "\t" . '</div><!-- .weights-calculator -->' . "\n";

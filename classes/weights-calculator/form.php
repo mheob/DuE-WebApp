@@ -14,7 +14,7 @@
 
 namespace WebApp\Classes\WeightsCalculator;
 
-require_once(__DIR__ . "/../../lang/de/text.php");
+require_once(__DIR__ . "/../../lang/language.php");
 
 use WebApp\Lang as LANG;
 
@@ -23,14 +23,27 @@ use WebApp\Lang as LANG;
  *
  * @package WebApp\Classes\WeightsCalculator
  */
-class Form extends LANG\Text
+class Form
 {
+    protected $lang;
+
     /**
      * Constructor of the class
      */
     public function __construct()
     {
-#
+        try
+        {
+            $this->lang = LANG\Language::getInstance();
+            $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+            $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+            $this->lang->setDefault('de');
+            $this->lang->setLanguage('de');
+        }
+        catch (LANG\LanguageException $e)
+        {
+            echo $e->getMessage();
+        }
     }
 
     /**
@@ -82,41 +95,158 @@ class Form extends LANG\Text
      */
     public function inputfields($material = "")
     {
+        $out = '';
         switch ($material)
         {
             case 'fs':
-                $form = array($this->weight_form_width => 'w', $this->weight_form_thickness => 't');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.width")     => 'w',
+                              $this->lang->get("Weight.Form.thickness") => 't');
                 break;
             case 'ss':
-                $form = array($this->weight_form_width => 'w');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.width") => 'w');
                 break;
             case 'rs':
-                $form = array($this->weight_form_diameter => 'dia');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.diameter") => 'dia');
                 break;
             case 'chs':
-                $form = array($this->weight_form_outside_dia => 'odia', $this->weight_form_inside_dia => 'idia');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.outside_dia") => 'odia',
+                              $this->lang->get("Weight.Form.inside_dia")  => 'idia');
                 break;
             case 'shs':
-                $form = array($this->weight_form_outside_mess => 'om', $this->weight_form_wall_thickness => 'wt');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.outside_mess")   => 'om',
+                              $this->lang->get("Weight.Form.wall_thickness") => 'wt');
                 break;
             case 'rhs':
-                $form = array($this->weight_form_width => 'w', $this->weight_form_height => 'h', $this->weight_form_wall_thickness => 'wt');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.width")          => 'w',
+                              $this->lang->get("Weight.Form.height")         => 'h',
+                              $this->lang->get("Weight.Form.wall_thickness") => 'wt');
                 break;
             case 'as':
-                $form = array($this->weight_form_s1 => 's1', $this->weight_form_s2 => 's2', $this->weight_form_thickness => 't');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.s1")        => 's1',
+                              $this->lang->get("Weight.Form.s2")        => 's2',
+                              $this->lang->get("Weight.Form.thickness") => 't');
                 break;
             case 'us':
-                $form = array($this->weight_form_sl => 'sl', $this->weight_form_width => 'w', $this->weight_form_thickness => 't');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.sl")    => 'sl',
+                              $this->lang->get("Weight.Form.width") => 'w',
+                              $this->lang->get("Weight.Form.ws")    => 't');
                 break;
             case 'hs':
-                $form = array($this->weight_form_ws => 'ws');
+                try
+                {
+                    $this->lang = LANG\Language::getInstance();
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/page.ini');
+                    $this->lang->addLanguageTags(__DIR__ . '/../../lang/weight.ini');
+                    $this->lang->setDefault('de');
+                    $this->lang->setLanguage('de');
+                }
+                catch (LANG\LanguageException $e)
+                {
+                    echo $e->getMessage();
+                }
+                $form = array($this->lang->get("Weight.Form.width") => 'ws');
                 break;
             default:
-                $form = '<strong>E R R O R !</strong><br>Please contact the adminisrator.<br>(Information for the admin: function inputfields($material="") in class formular)';
+                $form = '<strong>E R R O R !</strong><br>Please contact the administrator.<br>';
+                $form .= '(Information for the admin:function inputfields($material="") in class formular)';
                 break;
         }
-
-        $out = '';
 
         foreach ($form as $text => $value)
         {
@@ -132,10 +262,10 @@ class Form extends LANG\Text
                 $out .= '';
             }
 
-            $out .= '" placeholder="' . $this->weight_form_mm . '" pattern="[0-9]*[.,]?[0-9]+" required>' . "\n";
+            $out .= '" placeholder="' . $this->lang->get("Weight.Form.mm") . '" pattern="[0-9]*[.,]?[0-9]+" required>' . "\n";
         }
 
-        $out .= "\t\t    " . '<label for="l">' . $this->weight_form_length . '</label>' . "\n";
+        $out .= "\t\t    " . '<label for="l">' . $this->lang->get("Weight.Form.length") . '</label>' . "\n";
         $out .= "\t\t    " . '<input type="text" name="l" id="l" value="';
 
         if (isset($_POST['l']))
@@ -147,24 +277,24 @@ class Form extends LANG\Text
             $out .= '';
         }
 
-        $out .= '" placeholder="' . $this->weight_form_mm . '" pattern="[0-9]*[.,]?[0-9]+" required>' . "\n";
-        $out .= "\t\t    " . '<label for="mat">' . $this->weight_form_material . '</label>' . "\n";
+        $out .= '" placeholder="' . $this->lang->get("Weight.Form.mm") . '" pattern="[0-9]*[.,]?[0-9]+" required>' . "\n";
+        $out .= "\t\t    " . '<label for="mat">' . $this->lang->get("Weight.Form.material") . '</label>' . "\n";
         $specialweight = array(
-            ''                          => '',
-            $this->weight_form_mat_al   => '2.8',
-            $this->weight_form_mat_pb   => '9.5',
-            $this->weight_form_mat_cusn => '8.91',
-            $this->weight_form_mat_cual => '7.6',
-            $this->weight_form_mat_fe   => '7.85',
-            $this->weight_form_mat_gg   => '7.3',
-            $this->weight_form_mat_cu   => '8.9',
-            $this->weight_form_mat_ms   => '8.6',
-            $this->weight_form_mat_ti   => '4.5'
+            ''                                       => '',
+            $this->lang->get("Weight.Form.mat_al")   => '2.8',
+            $this->lang->get("Weight.Form.mat_pb")   => '9.5',
+            $this->lang->get("Weight.Form.mat_cusn") => '8.91',
+            $this->lang->get("Weight.Form.mat_cual") => '7.6',
+            $this->lang->get("Weight.Form.mat_fe")   => '7.85',
+            $this->lang->get("Weight.Form.mat_gg")   => '7.3',
+            $this->lang->get("Weight.Form.mat_cu")   => '8.9',
+            $this->lang->get("Weight.Form.mat_ms")   => '8.6',
+            $this->lang->get("Weight.Form.mat_ti")   => '4.5'
         );
         if (isset($_POST['sw']) ? $sw = $_POST['sw'] : $sw = '') ;
         $sw_out = $this->selectbox("sw", $specialweight, $sw);
         $out .= $sw_out;
-        $out .= "\t\t    " . '<label for="show_mat">' . $this->weight_form_density . '</label>' . "\n";
+        $out .= "\t\t    " . '<label for="show_mat">' . $this->lang->get("Weight.Form.density") . '</label>' . "\n";
         $out .= "\t\t    " . '<input id="show_mat" type="text" name="show_mat" value="';
 
         if (isset($_POST['sw']))
@@ -172,8 +302,8 @@ class Form extends LANG\Text
             $out .= $_POST['sw'];
         }
 
-        $out .= $this->weight_form_density_value . '" disabled>' . "\n";
-        $out .= "\t\t    " . '<label for="p">' . $this->weight_form_pieces . '</label>' . "\n";
+        $out .= $this->lang->get("Weight.Form.density_value") . '" disabled>' . "\n";
+        $out .= "\t\t    " . '<label for="p">' . $this->lang->get("Weight.Form.pieces") . '</label>' . "\n";
         $out .= "\t\t    " . '<input class="short" type="number" name="p" id="p" value="';
 
         if (isset($_POST['p']))
@@ -196,7 +326,7 @@ class Form extends LANG\Text
      */
     public function formfooter()
     {
-        $out = "\t\t    " . '<input type="submit" value="' . $this->weight_form_submit . '">' . "\n";
+        $out = "\t\t    " . '<input type="submit" value="' . $this->lang->get("Weight.Form.submit") . '">' . "\n";
         $out .= "\t\t    " . '<input type="hidden" name="call" value="1">' . "\n";
         $out .= "\t\t" . '</form>' . "\n";
 

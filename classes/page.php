@@ -14,7 +14,7 @@
 
 namespace WebApp\Classes;
 
-require_once(__DIR__ . "/../lang/de/text.php");
+require_once(__DIR__ . "/../lang/language.php");
 require_once(__DIR__ . "/calculation/output.php");
 require_once(__DIR__ . "/machinedata/output.php");
 require_once(__DIR__ . "/surface-rates/output.php");
@@ -34,7 +34,7 @@ use WebApp\Classes\WeightsCalculator as WC;
  */
 class Page
 {
-    private $text;
+    private $lang;
     private $output;
     public $slogan1;
     public $slogan2;
@@ -45,33 +45,46 @@ class Page
     public function __construct()
     {
         session_start();
-        $this->text = new LANG\Text();
+
+        try
+        {
+            $this->lang = LANG\Language::getInstance();
+            $this->lang->addLanguageTags(__DIR__ . '/../lang/page.ini');
+            $this->lang->addLanguageTags(__DIR__ . '/../lang/weight.ini');
+            $this->lang->setDefault('de');
+            $this->lang->setLanguage('de');
+        }
+        catch (LANG\LanguageException $e)
+        {
+            echo $e->getMessage();
+        }
+
 
         if (isset($_GET['main']))
         {
             switch ($_GET['main'])
             {
-                case $this->text->page_header_nav_href1:
-                    $this->slogan1 = $this->text->page_header_nav_text1;
+                case 'calculation':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text1');
                     break;
-                case $this->text->page_header_nav_href2:
-                    $this->slogan1 = $this->text->page_header_nav_text2;
+                case 'weights-calculator':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text2');
                     break;
-                case $this->text->page_header_nav_href3:
-                    $this->slogan1 = $this->text->page_header_nav_text3;
+                case 'machinedata':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text3');
                     break;
-                case $this->text->page_header_nav_href4:
-                    $this->slogan1 = $this->text->page_header_nav_text4;
+                case 'surface-rates':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text4');
                     break;
                 default:
-                    $this->slogan1 = $this->text->page_header_slogan;
+                    $this->slogan1 = $this->lang->get('Page.Header.slogan');
                     break;
             }
         }
         else
         {
 
-            $this->slogan1 = $this->text->page_header_slogan;
+            $this->slogan1 = $this->lang->get('Page.Header.slogan');
         }
 
         if (isset($_GET['shape']))
@@ -79,31 +92,31 @@ class Page
             switch ($_GET['shape'])
             {
                 case 'as':
-                    $this->slogan2 = $this->text->weight_output_as;
+                    $this->slogan2 = $this->lang->get("Weight.Output.as");
                     break;
                 case 'chs':
-                    $this->slogan2 = $this->text->weight_output_chs;
+                    $this->slogan2 = $this->lang->get("Weight.Output.chs");
                     break;
                 case 'fs':
-                    $this->slogan2 = $this->text->weight_output_fs;
+                    $this->slogan2 = $this->lang->get("Weight.Output.fs");
                     break;
                 case 'hs':
-                    $this->slogan2 = $this->text->weight_output_hs;
+                    $this->slogan2 = $this->lang->get("Weight.Output.hs");
                     break;
                 case 'rhs':
-                    $this->slogan2 = $this->text->weight_output_rhs;
+                    $this->slogan2 = $this->lang->get("Weight.Output.rhs");
                     break;
                 case 'rs':
-                    $this->slogan2 = $this->text->weight_output_rs;
+                    $this->slogan2 = $this->lang->get("Weight.Output.rs");
                     break;
                 case 'shs':
-                    $this->slogan2 = $this->text->weight_output_shs;
+                    $this->slogan2 = $this->lang->get("Weight.Output.shs");
                     break;
                 case 'ss':
-                    $this->slogan2 = $this->text->weight_output_ss;
+                    $this->slogan2 = $this->lang->get("Weight.Output.ss");
                     break;
                 case 'us':
-                    $this->slogan2 = $this->text->weight_output_us;
+                    $this->slogan2 = $this->lang->get("Weight.Output.us");
                     break;
                 default:
                     echo "ERROR in <code>page.php</code> in <code>__construct</code>";
@@ -130,8 +143,8 @@ class Page
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>' . $this->text->page_header_title . '</title>
-    <meta name="description" content="' . $this->text->page_header_description . '">
+    <title>' . $this->lang->get("Page.Header.title") . '</title>
+    <meta name="description" content="' . $this->lang->get("Page.Header.description") . '">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- favicon.ico und apple-touch-icon.png müssen im Rootverzeichnis liegen! -->
@@ -142,13 +155,13 @@ class Page
 </head>
 <body>
     <!--[if lt IE 8]>
-        <p class="browsehappy">' . $this->text->page_browserhappy . '</p>
+        <p class="browsehappy">' . $this->lang->get("Page.Browserhappy") . '</p>
     <![endif]-->
 
     <div id="page" class="clearfix">
         <header id="mainheader" class="clearfix">
             <div>
-                <h1><a href="/">' . $this->text->page_header_topic . '</a></h1>
+                <h1><a href="/">' . $this->lang->get("Page.Header.topic") . '</a></h1>
                 <h2><a href="/">' . $slogan1;
         if (!empty($slogan2))
         {
@@ -161,22 +174,22 @@ class Page
 
         <nav id="mainnav">
             <ul>
-                <li><a href="index.php?main=' . $this->text->page_header_nav_href1 . '">' . $this->text->page_header_nav_text1 . '</a></li>
-                <li><a href="index.php?main=' . $this->text->page_header_nav_href2 . '">' . $this->text->page_header_nav_text2 . '</a>
+                <li><a href="index.php?main=calculation">' . $this->lang->get('Page.Header.nav_text1') . '</a></li>
+                <li><a href="index.php?main=weights-calculator">' . $this->lang->get('Page.Header.nav_text2') . '</a>
                     <ul>
-                        <li><a href="' . $this->text->weight_output_fs_href . '">' . $this->text->weight_output_fs . '</a></li>
-                        <li><a href="' . $this->text->weight_output_shs_href . '">' . $this->text->weight_output_shs . '</a></li>
-                        <li><a href="' . $this->text->weight_output_rhs_href . '">' . $this->text->weight_output_rhs . '</a></li>
-                        <li><a href="' . $this->text->weight_output_chs_href . '">' . $this->text->weight_output_chs . '</a></li>
-                        <li><a href="' . $this->text->weight_output_rs_href . '">' . $this->text->weight_output_rs . '</a></li>
-                        <li><a href="' . $this->text->weight_output_hs_href . '">' . $this->text->weight_output_hs . '</a></li>
-                        <li><a href="' . $this->text->weight_output_us_href . '">' . $this->text->weight_output_us . '</a></li>
-                        <li><a href="' . $this->text->weight_output_ss_href . '">' . $this->text->weight_output_ss . '</a></li>
-                        <li><a href="' . $this->text->weight_output_as_href . '">' . $this->text->weight_output_as . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=fs">' . $this->lang->get("Weight.Output.fs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=shs">' . $this->lang->get("Weight.Output.shs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=rhs">' . $this->lang->get("Weight.Output.rhs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=chs">' . $this->lang->get("Weight.Output.chs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=rs">' . $this->lang->get("Weight.Output.rs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=hs">' . $this->lang->get("Weight.Output.hs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=us">' . $this->lang->get("Weight.Output.us") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=ss">' . $this->lang->get("Weight.Output.ss") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&shape=as">' . $this->lang->get("Weight.Output.as") . '</a></li>
                     </ul>
                 </li>
-                <li><a href="index.php?main=' . $this->text->page_header_nav_href3 . '">' . $this->text->page_header_nav_text3 . '</a></li>
-                <li><a href="index.php?main=' . $this->text->page_header_nav_href4 . '">' . $this->text->page_header_nav_text4 . '</a></li>
+                <li><a href="index.php?main=machinedata">' . $this->lang->get('Page.Header.nav_text3') . '</a></li>
+                <li><a href="index.php?main=surface-rates">' . $this->lang->get('Page.Header.nav_text4') . '</a></li>
             </ul>
         </nav>' . "\n\n";
 
@@ -192,12 +205,12 @@ class Page
         {
             switch ($_GET['main'])
             {
-                case $this->text->page_header_nav_href1:
-                    $this->slogan1 = $this->text->page_header_nav_text1;
+                case 'calculation':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text1');
                     $this->output = new CALC\Calculation_output();
                     break;
-                case $this->text->page_header_nav_href2:
-                    $this->slogan1 = $this->text->page_header_nav_text2;
+                case 'weights-calculator':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text2');
                     $this->output = new WC\Weights_calculator_output();
 
                     if (isset($_GET['shape']))
@@ -210,16 +223,16 @@ class Page
                     }
 
                     break;
-                case $this->text->page_header_nav_href3:
-                    $this->slogan1 = $this->text->page_header_nav_text3;
+                case 'machinedata':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text3');
                     $this->output = new MD\Machinedata_output();
                     break;
-                case $this->text->page_header_nav_href4:
-                    $this->slogan1 = $this->text->page_header_nav_text4;
+                case 'surface-rates':
+                    $this->slogan1 = $this->lang->get('Page.Header.nav_text4');
                     $this->output = new SR\Surface_rates_output();
                     break;
                 default:
-                    $this->slogan1 = $this->text->page_header_slogan;
+                    $this->slogan1 = $this->lang->get('Page.Header.slogan');
                     print '<p>E R R O R   D E T E C T E D !<br>' . "\n";
                     print 'Please contact the Administrator an tell him the following issue:</p>' . "\n";
                     print '<ul><li>Error in <code>page.php</code> on methode <code>content()</code>.</li></ul>';
@@ -261,7 +274,7 @@ class Page
             e.src = \'//www.google-analytics.com/analytics.js\';
             r.parentNode.insertBefore(e, r)
         }(window, document, \'script\', \'ga\'));
-        ga(\'create\', \'' . $this->text->page_footer_gacode . '\');
+        ga(\'create\', \'' . $this->lang->get("Page.Footer.gacode") . '\');
         ga(\'send\', \'pageview\');
     </script>
 </body>
