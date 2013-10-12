@@ -36,9 +36,7 @@ class Text
     public $page_header_nav_text3 = 'Maschinendaten';
     public $page_header_nav_href4 = 'surface-rates';
     public $page_header_nav_text4 = 'Oberfl&auml;chenpreise';
-
-    public $page_browserhappy = 'Sie benutzen einen <strong>stark veralteten</strong> Browser. Benutzen Sie bitte einen <a href="http://browsehappy.com/">aktuellen Browser</a>um die Leistung und Sicherheit zu erhöhen.';
-
+    public $page_browserhappy = 'Sie benutzen einen <strong>sftark veralteten</strong> Browser. Benutzen Sie bitte einen <a href="http://browsehappy.com/">aktuellen Browser</a>um die Leistung und Sicherheit zu erhöhen.';
     public $page_footer_gacode = 'UA-XXXXX-X';
 
     public $weight_all_weight = 'Gewicht';
