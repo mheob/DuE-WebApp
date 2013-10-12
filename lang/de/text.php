@@ -15,8 +15,12 @@
  * - translation into English
  */
 
+namespace WebApp\Lang;
+
 /**
  * Class Text
+ *
+ * @package WebApp\Lang
  */
 class Text
 {

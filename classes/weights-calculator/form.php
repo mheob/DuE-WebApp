@@ -12,14 +12,18 @@
  * @since      11.10.2013
  */
 
+namespace WebApp\Classes\WeightsCalculator;
+
 require_once(__DIR__ . "/../../lang/de/text.php");
 
+use WebApp\Lang as LANG;
+
 /**
- *
- *
  * Class Form
+ *
+ * @package WebApp\Classes\WeightsCalculator
  */
-class Form extends Text
+class Form extends LANG\Text
 {
     /**
      * Constructor of the class
@@ -43,7 +47,7 @@ class Form extends Text
      * Assemble the selctbox
      *
      * @param string  $fieldname
-     * @param string  $val
+     * @param array   $val
      * @param integer $selectval
      *
      * @return string

@@ -12,11 +12,15 @@
  * @since      11.10.2013
  */
 
+namespace WebApp\Classes\WeightsCalculator;
+
 require_once(__DIR__ . "/form.php");
 require_once(__DIR__ . "/calculations.php");
 
 /**
  * Class Flatsteel
+ *
+ * @package WebApp\Classes\WeightsCalculator
  */
 class Flatsteel extends Form
 {

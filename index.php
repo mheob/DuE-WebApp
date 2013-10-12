@@ -11,11 +11,13 @@
  * @since      11.10.2013
  */
 
-require_once(__DIR__ . "/classes/page.php");
-require_once(__DIR__ . "/lang/de/text.php");
+namespace WebApp;
 
-$page = new Page();
-$text = new Text();
+require_once(__DIR__ . "/classes/page.php");
+
+use WebApp\Classes as CLASSES;
+
+$page = new CLASSES\Page();
 
 echo $page->header($page->slogan1, $page->slogan2);
 

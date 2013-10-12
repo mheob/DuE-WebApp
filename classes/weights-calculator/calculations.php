@@ -12,15 +12,19 @@
  * @since      11.10.2013
  */
 
+namespace WebApp\Classes\WeightsCalculator;
+
 /**
  * Class Calculations
  *
  * Comprised all needed calculations for Weights-Calculator.
+ *
+ * @package WebApp\Classes\WeightsCalculator
  */
 class Calculations
 {
     /**
-     *
+     * Constructor of the class
      */
     public function __construct()
     {

@@ -12,10 +12,25 @@
  * @since      11.10.2013
  */
 
+namespace WebApp\Classes;
+
 require_once(__DIR__ . "/../lang/de/text.php");
+require_once(__DIR__ . "/calculation/output.php");
+require_once(__DIR__ . "/machinedata/output.php");
+require_once(__DIR__ . "/surface-rates/output.php");
+require_once(__DIR__ . "/weights-calculator/output.php");
+
+use WebApp\Lang as LANG;
+use WebApp\Classes\Calculation as CALC;
+use WebApp\Classes\Machinedata as MD;
+use WebApp\Classes\SurfaceRates as SR;
+use WebApp\Classes\WeightsCalculator as WC;
+
 
 /**
  * Class Page
+ *
+ * @package WebApp\Classes
  */
 class Page
 {
@@ -30,7 +45,7 @@ class Page
     public function __construct()
     {
         session_start();
-        $this->text = new Text();
+        $this->text = new LANG\Text();
 
         if (isset($_GET['main']))
         {
@@ -179,13 +194,11 @@ class Page
             {
                 case $this->text->page_header_nav_href1:
                     $this->slogan1 = $this->text->page_header_nav_text1;
-                    require_once(__DIR__ . "/" . $this->text->page_header_nav_href1 . "/output.php");
-                    $this->output = new Calculation_output();
+                    $this->output = new CALC\Calculation_output();
                     break;
                 case $this->text->page_header_nav_href2:
                     $this->slogan1 = $this->text->page_header_nav_text2;
-                    require_once(__DIR__ . "/" . $this->text->page_header_nav_href2 . "/output.php");
-                    $this->output = new Weights_calculator_output();
+                    $this->output = new WC\Weights_calculator_output();
 
                     if (isset($_GET['shape']))
                     {
@@ -199,13 +212,11 @@ class Page
                     break;
                 case $this->text->page_header_nav_href3:
                     $this->slogan1 = $this->text->page_header_nav_text3;
-                    require_once(__DIR__ . "/" . $this->text->page_header_nav_href3 . "/output.php");
-                    $this->output = new Machinedata_output();
+                    $this->output = new MD\Machinedata_output();
                     break;
                 case $this->text->page_header_nav_href4:
                     $this->slogan1 = $this->text->page_header_nav_text4;
-                    require_once(__DIR__ . "/" . $this->text->page_header_nav_href4 . "/output.php");
-                    $this->output = new Surface_rates_output();
+                    $this->output = new SR\Surface_rates_output();
                     break;
                 default:
                     $this->slogan1 = $this->text->page_header_slogan;

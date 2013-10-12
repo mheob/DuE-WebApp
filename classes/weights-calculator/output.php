@@ -12,6 +12,8 @@
  * @since      11.10.2013
  */
 
+namespace WebApp\Classes\WeightsCalculator;
+
 require_once(__DIR__ . "/../../lang/de/text.php");
 require_once(__DIR__ . "/anglesteel.php");
 require_once(__DIR__ . "/circular_hollow_section.php");
@@ -23,8 +25,12 @@ require_once(__DIR__ . "/square_hollow_section.php");
 require_once(__DIR__ . "/squaresteel.php");
 require_once(__DIR__ . "/usteel.php");
 
+use WebApp\Lang as LANG;
+
 /**
  * Class Weights_calculator_output
+ *
+ * @package WebApp\Classes\WeightsCalculator
  */
 class Weights_calculator_output
 {
@@ -44,7 +50,7 @@ class Weights_calculator_output
      */
     public function __construct()
     {
-        $this->text = new Text();
+        $this->text = new LANG\Text();
     }
 
     /**

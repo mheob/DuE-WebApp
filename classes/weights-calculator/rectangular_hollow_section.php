@@ -12,11 +12,15 @@
  * @since      11.10.2013
  */
 
+namespace WebApp\Classes\WeightsCalculator;
+
 require_once(__DIR__ . "/form.php");
 require_once(__DIR__ . "/calculations.php");
 
 /**
  * Class Rectangular_hollow_section
+ *
+ * @package WebApp\Classes\WeightsCalculator
  */
 class Rectangular_hollow_section extends Form
 {
