@@ -1,4 +1,6 @@
 $experimental-support-for-khtml: false;
+$experimental-support-for-svg: true;
+
 @import "compass/css3";
 
 @import "module/_variables";

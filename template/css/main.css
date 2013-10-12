@@ -683,26 +683,27 @@ footer {
   margin: 0 auto;
   line-height: 2.5em;
   padding: 0 4%;
-  background: #444;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0NDQ0NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQ1JSIgc3RvcC1jb2xvcj0iIzU1NTU1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU1JSIgc3RvcC1jb2xvcj0iIzU1NTU1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0NDQ0NDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(45%, #555555), color-stop(55%, #555555), color-stop(100%, #444444));
-  background: -webkit-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
-  background: -o-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
-  background: -ms-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
-  background: linear-gradient(to bottom, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#444444', GradientType=0);
+  background-color: #444;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF444444', endColorstr='#FF444444');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ0NDQ0NCIvPjxzdG9wIG9mZnNldD0iNDUlIiBzdG9wLWNvbG9yPSIjNTU1NTU1Ii8+PHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiM1NTU1NTUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0NDQ0NDQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(45%, #555555), color-stop(55%, #555555), color-stop(100%, #444444));
+  background-image: -webkit-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
+  background-image: -moz-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
+  background-image: -o-linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
+  background-image: linear-gradient(top, #444444 0%, #555555 45%, #555555 55%, #444444 100%);
 }
-/* line 24, ../sass/module/custom/_navigation.scss */
+/* line 18, ../sass/module/custom/_navigation.scss */
 #mainnav ul li {
   display: inline-block;
   width: 24.5%;
 }
-/* line 27, ../sass/module/custom/_navigation.scss */
+/* line 21, ../sass/module/custom/_navigation.scss */
 #mainnav ul li:not(:last-child) {
   border-right: 1px solid white;
 }
-/* line 30, ../sass/module/custom/_navigation.scss */
+/* line 24, ../sass/module/custom/_navigation.scss */
 #mainnav ul li a {
   color: white;
   font-size: 1.3em;
@@ -710,11 +711,11 @@ footer {
   text-decoration: none;
   display: block;
 }
-/* line 36, ../sass/module/custom/_navigation.scss */
+/* line 30, ../sass/module/custom/_navigation.scss */
 #mainnav ul li a:hover {
   color: #ddd;
 }
-/* line 40, ../sass/module/custom/_navigation.scss */
+/* line 34, ../sass/module/custom/_navigation.scss */
 #mainnav ul li ul {
   display: none;
   position: absolute;
@@ -722,7 +723,7 @@ footer {
   width: auto;
   padding: 0;
 }
-/* line 46, ../sass/module/custom/_navigation.scss */
+/* line 40, ../sass/module/custom/_navigation.scss */
 #mainnav ul li ul li {
   display: block;
   border-top: 1px solid white;
@@ -730,7 +731,7 @@ footer {
   padding: 0.3em 1em;
   width: 13.5em;
 }
-/* line 52, ../sass/module/custom/_navigation.scss */
+/* line 46, ../sass/module/custom/_navigation.scss */
 #mainnav ul li ul li a {
   font-size: 1em;
   text-align: left;
