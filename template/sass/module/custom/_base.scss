@@ -5,15 +5,19 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #ddd;
-}
-
+/* Info box for not javascript users */
 html.js #no-js {
     display: none !important;
     visibility: hidden;
 }
 
+body {
+    background-color: #ddd;
+}
+
+/**
+  * Two columns display
+  */
 .lc, .rc {
     float: left;
     width: 50%;
