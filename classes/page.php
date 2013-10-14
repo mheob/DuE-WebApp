@@ -34,9 +34,24 @@ use WebApp\Classes\WeightsCalculator as WC;
  */
 class Page
 {
+    /**
+     * @var null|\WebApp\Lang\Language
+     */
     private $lang;
+
+    /**
+     * @var string
+     */
     private $output;
+
+    /**
+     * @var string
+     */
     public $slogan1;
+
+    /**
+     * @var string
+     */
     public $slogan2;
 
     /**
@@ -198,38 +213,42 @@ class Page
 
     /**
      * Controls the display of the CONTENT from the HTML
+     *
+     * @return string
      */
     public function content()
     {
+        $out = "";
         if (isset($_GET['main']))
         {
             switch ($_GET['main'])
             {
                 case 'calculation':
                     $this->slogan1 = $this->lang->get('Page.Header.nav_text1');
-                    $this->output = new CALC\Calculation_output();
+                    $this->output = new CALC\Output();
                     break;
                 case 'weights-calculator':
                     $this->slogan1 = $this->lang->get('Page.Header.nav_text2');
-                    $this->output = new WC\Weights_calculator_output();
+                    $out .= "\t" . '<div id="weights-calculator">' . "\n";
+                    $this->output = new WC\Output();
 
                     if (isset($_GET['shape']))
                     {
-                        $this->output->show($_GET['shape']);
+                        $out .= $this->output->show($_GET['shape']);
                     }
                     else
                     {
-                        $this->output->show('');
+                        $out .= $this->output->show('');
                     }
-
+                    $out .= "\t" . '</div><!-- #weights-calculator -->' . "\n";
                     break;
                 case 'machinedata':
                     $this->slogan1 = $this->lang->get('Page.Header.nav_text3');
-                    $this->output = new MD\Machinedata_output();
+                    $this->output = new MD\Output();
                     break;
                 case 'surface-rates':
                     $this->slogan1 = $this->lang->get('Page.Header.nav_text4');
-                    $this->output = new SR\Surface_rates_output();
+                    $this->output = new SR\Output();
                     break;
                 default:
                     $this->slogan1 = $this->lang->get('Page.Header.slogan');
@@ -239,6 +258,8 @@ class Page
                     break;
             }
         }
+
+        return $out;
     }
 
     /**

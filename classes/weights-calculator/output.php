@@ -32,17 +32,56 @@ use WebApp\Lang as LANG;
  *
  * @package WebApp\Classes\WeightsCalculator
  */
-class Weights_calculator_output
+class Output
 {
+    /**
+     * @var null|\WebApp\Lang\Language
+     */
     private $lang;
+
+    /**
+     * @var integer
+     */
     private $as;
+
+    /**
+     * @var integer
+     */
     private $chs;
+
+    /**
+     * @var integer
+     */
     private $fs;
+
+    /**
+     * @var integer
+     */
     private $hs;
+
+    /**
+     * @var integer
+     */
     private $rhs;
+
+    /**
+     * @var integer
+     */
     private $rs;
+
+    /**
+     * @var integer
+     */
     private $shs;
+
+    /**
+     * @var integer
+     */
     private $ss;
+
+    /**
+     * @var integer
+     */
     private $us;
 
     /**
@@ -92,6 +131,8 @@ class Weights_calculator_output
      * Controls the display of the various forms
      *
      * @param string $shape
+     *
+     * @return string
      */
     public function show($shape = '')
     {
@@ -99,43 +140,45 @@ class Weights_calculator_output
         {
             case 'as':
                 $this->as = new anglesteel();
-                echo $this->as->output();
+                $out = $this->as->output();
                 break;
             case 'chs':
                 $this->chs = new circular_hollow_section();
-                echo $this->chs->output();
+                $out = $this->chs->output();
                 break;
             case 'fs':
                 $this->fs = new flatsteel();
-                echo $this->fs->output();
+                $out = $this->fs->output();
                 break;
             case 'hs':
                 $this->hs = new hexagonalsteel();
-                echo $this->hs->output();
+                $out = $this->hs->output();
                 break;
             case 'rhs':
                 $this->rhs = new rectangular_hollow_section();
-                echo $this->rhs->output();
+                $out = $this->rhs->output();
                 break;
             case 'rs':
                 $this->rs = new roundsteel();
-                echo $this->rs->output();
+                $out = $this->rs->output();
                 break;
             case 'shs':
                 $this->shs = new square_hollow_section();
-                echo $this->shs->output();
+                $out = $this->shs->output();
                 break;
             case 'ss':
                 $this->ss = new squaresteel();
-                echo $this->ss->output();
+                $out = $this->ss->output();
                 break;
             case 'us':
                 $this->us = new usteel();
-                echo $this->us->output();
+                $out = $this->us->output();
                 break;
             default:
-                echo $this->overview();
+                $out = $this->overview();
                 break;
         }
+
+        return $out;
     }
 }

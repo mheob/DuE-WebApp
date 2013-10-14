@@ -24,12 +24,39 @@ require_once(__DIR__ . "/calculations.php");
  */
 class Usteel extends Form
 {
+    /**
+     * @var Calculations
+     */
     private $calc;
+
+    /**
+     * @var integer
+     */
     private $sl;
+
+    /**
+     * @var integer
+     */
     private $w;
+
+    /**
+     * @var integer
+     */
     private $t;
+
+    /**
+     * @var integer
+     */
     private $l;
+
+    /**
+     * @var integer
+     */
     private $sw;
+
+    /**
+     * @var integer
+     */
     private $p;
 
     /**
@@ -73,10 +100,8 @@ class Usteel extends Form
      */
     public function output()
     {
-        $out = "\t" . '<div class="weights-calculator">' . "\n";
-
         /* left column */
-        $out .= "\t    " . '<div class="lc">' . "\n";
+        $out = "\t    " . '<div class="lc">' . "\n";
         $out .= $this->formheader();
         $out .= $this->inputfields("us");
 
@@ -100,7 +125,6 @@ class Usteel extends Form
         $out .= "\t\t    " . '<img src="' . $this->lang->get("Weight.Output.us_img") . '" alt="' . $this->lang->get("Weight.Output.us") . '">' . "\n";
         $out .= "\t\t" . '</figure>' . "\n";
         $out .= "\t    " . '</div><!-- .rc -->' . "\n";
-        $out .= "\t" . '</div><!-- .weights-calculator -->' . "\n";
 
         return $out;
     }

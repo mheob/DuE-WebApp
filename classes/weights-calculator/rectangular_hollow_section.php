@@ -24,12 +24,39 @@ require_once(__DIR__ . "/calculations.php");
  */
 class Rectangular_hollow_section extends Form
 {
+    /**
+     * @var Calculations
+     */
     private $calc;
+
+    /**
+     * @var integer
+     */
     private $w;
+
+    /**
+     * @var integer
+     */
     private $h;
+
+    /**
+     * @var integer
+     */
     private $wt;
+
+    /**
+     * @var integer
+     */
     private $l;
+
+    /**
+     * @var integer
+     */
     private $sw;
+
+    /**
+     * @var integer
+     */
     private $p;
 
     /**
@@ -73,10 +100,8 @@ class Rectangular_hollow_section extends Form
      */
     public function output()
     {
-        $out = "\t" . '<div class="weights-calculator">' . "\n";
-
         /* left column */
-        $out .= "\t    " . '<div class="lc">' . "\n";
+        $out = "\t    " . '<div class="lc">' . "\n";
         $out .= $this->formheader();
         $out .= $this->inputfields("rhs");
 
@@ -100,7 +125,6 @@ class Rectangular_hollow_section extends Form
         $out .= "\t\t    " . '<img src="' . $this->lang->get("Weight.Output.rhs_img") . '" alt="' . $this->lang->get("Weight.Output.rhs") . '">' . "\n";
         $out .= "\t\t" . '</figure>' . "\n";
         $out .= "\t    " . '</div><!-- .rc -->' . "\n";
-        $out .= "\t" . '</div><!-- .weights-calculator -->' . "\n";
 
         return $out;
     }

@@ -22,12 +22,39 @@ require_once(__DIR__ . "/calculations.php");
  */
 class Anglesteel extends Form
 {
+    /**
+     * @var Calculations
+     */
     private $calc;
+
+    /**
+     * @var integer
+     */
     private $s1;
+
+    /**
+     * @var integer
+     */
     private $s2;
+
+    /**
+     * @var integer
+     */
     private $t;
+
+    /**
+     * @var integer
+     */
     private $l;
+
+    /**
+     * @var integer
+     */
     private $sw;
+
+    /**
+     * @var integer
+     */
     private $p;
 
     /**
@@ -71,10 +98,8 @@ class Anglesteel extends Form
      */
     public function output()
     {
-        $out = "\t" . '<div class="weights-calculator">' . "\n";
-
         /* left column */
-        $out .= "\t    " . '<div class="lc">' . "\n";
+        $out = "\t    " . '<div class="lc">' . "\n";
         $out .= $this->formheader();
         $out .= $this->inputfields("as");
 
@@ -98,7 +123,6 @@ class Anglesteel extends Form
         $out .= "\t\t    " . '<img src="' . $this->lang->get("Weight.Output.as_img") . '" alt="' . $this->lang->get("Weight.Output.as") . '">' . "\n";
         $out .= "\t\t" . '</figure>' . "\n";
         $out .= "\t    " . '</div><!-- .rc -->' . "\n";
-        $out .= "\t" . '</div><!-- .weights-calculator -->' . "\n";
 
         return $out;
     }

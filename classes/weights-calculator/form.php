@@ -25,6 +25,9 @@ use WebApp\Lang as LANG;
  */
 class Form
 {
+    /**
+     * @var null|\WebApp\Lang\Language
+     */
     protected $lang;
 
     /**

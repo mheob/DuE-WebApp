@@ -23,7 +23,7 @@ use WebApp\Classes as CLASSES;
  *
  * @package WebApp\Classes\Calculation
  */
-class Calculation_output extends CLASSES\Page
+class Output extends CLASSES\Page
 {
     public function __construct()
     {

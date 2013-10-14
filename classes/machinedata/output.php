@@ -23,7 +23,7 @@ use WebApp\Classes as CLASSES;
  *
  * @package WebApp\Classes\Machinedata
  */
-class Machinedata_output extends CLASSES\Page
+class Output extends CLASSES\Page
 {
     public function __construct()
     {

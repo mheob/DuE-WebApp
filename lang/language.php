@@ -121,6 +121,7 @@ class Language implements \ArrayAccess
      */
     private function __clone()
     {
+        // Do nothing!
     }
 
     /**
