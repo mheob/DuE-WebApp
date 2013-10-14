@@ -607,6 +607,12 @@ body {
 }
 
 /* line 12, ../sass/module/custom/_base.scss */
+html.js #no-js {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 17, ../sass/module/custom/_base.scss */
 .lc, .rc {
   float: left;
   width: 50%;
@@ -616,7 +622,7 @@ body {
 /**
   * Page definitions
   */
-/* line 21, ../sass/module/custom/_base.scss */
+/* line 26, ../sass/module/custom/_base.scss */
 #page {
   padding: 2em;
   width: 960px;
@@ -629,22 +635,22 @@ body {
 /**
   * Header definitions
   */
-/* line 34, ../sass/module/custom/_base.scss */
+/* line 39, ../sass/module/custom/_base.scss */
 #mainheader div {
   width: 60%;
   height: 5em;
   float: left;
 }
-/* line 40, ../sass/module/custom/_base.scss */
+/* line 45, ../sass/module/custom/_base.scss */
 #mainheader h1, #mainheader h2 {
   margin: 0;
 }
-/* line 44, ../sass/module/custom/_base.scss */
+/* line 49, ../sass/module/custom/_base.scss */
 #mainheader a {
   color: #555;
   text-decoration: none;
 }
-/* line 49, ../sass/module/custom/_base.scss */
+/* line 54, ../sass/module/custom/_base.scss */
 #mainheader figure {
   float: right;
   background: url(../img/logo.png) no-repeat center center;
@@ -655,7 +661,7 @@ body {
 /**
   * Footer definitions
   */
-/* line 60, ../sass/module/custom/_base.scss */
+/* line 65, ../sass/module/custom/_base.scss */
 footer {
   background-color: #555;
   color: silver;

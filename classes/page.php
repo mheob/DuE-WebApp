@@ -173,6 +173,10 @@ class Page
         <p class="browsehappy">' . $this->lang->get("Page.Browserhappy") . '</p>
     <![endif]-->
 
+    <div id="no-js">
+        ' . $this->lang->get("Page.no-js") . '
+    </div>
+
     <div id="page" class="clearfix">
         <header id="mainheader" class="clearfix">
             <div>

@@ -9,6 +9,11 @@ body {
     background-color: #ddd;
 }
 
+html.js #no-js {
+    display: none !important;
+    visibility: hidden;
+}
+
 .lc, .rc {
     float: left;
     width: 50%;
