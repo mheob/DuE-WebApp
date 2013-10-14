@@ -8,8 +8,8 @@
  * @subpackage Weights-Calculator
  * @author     Alexander Böhm (alex@mheob.de)
  * @copyright  Copyright 2013, D&E Metall und Technik GmbH
- * @version    0.1
- * @since      11.10.2013
+ * @version    0.2
+ * @since      14.10.2013
  */
 
 namespace WebApp\Classes\WeightsCalculator;
