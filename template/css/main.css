@@ -582,17 +582,6 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Browse Happy prompt
-   ========================================================================== */
-/* line 517, ../sass/module/_normalize.scss */
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 /**
   * General and Body
   */
@@ -601,14 +590,23 @@ textarea {
   box-sizing: border-box;
 }
 
-/* Info box for not javascript users */
+/* Browse Happy prompt */
 /* line 9, ../sass/module/custom/_base.scss */
+.browsehappy, html.no-js #no-js {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Info box for not javascript users */
+/* line 17, ../sass/module/custom/_base.scss */
 html.js #no-js {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 14, ../sass/module/custom/_base.scss */
+/* line 22, ../sass/module/custom/_base.scss */
 body {
   background-color: #ddd;
 }
@@ -616,7 +614,7 @@ body {
 /**
   * Two columns display
   */
-/* line 21, ../sass/module/custom/_base.scss */
+/* line 29, ../sass/module/custom/_base.scss */
 .lc, .rc {
   float: left;
   width: 50%;
@@ -626,7 +624,7 @@ body {
 /**
   * Page definitions
   */
-/* line 30, ../sass/module/custom/_base.scss */
+/* line 38, ../sass/module/custom/_base.scss */
 #page {
   padding: 2em;
   width: 960px;
@@ -639,22 +637,22 @@ body {
 /**
   * Header definitions
   */
-/* line 43, ../sass/module/custom/_base.scss */
+/* line 51, ../sass/module/custom/_base.scss */
 #mainheader div {
   width: 60%;
   height: 5em;
   float: left;
 }
-/* line 49, ../sass/module/custom/_base.scss */
+/* line 57, ../sass/module/custom/_base.scss */
 #mainheader h1, #mainheader h2 {
   margin: 0;
 }
-/* line 53, ../sass/module/custom/_base.scss */
+/* line 61, ../sass/module/custom/_base.scss */
 #mainheader a {
   color: #555;
   text-decoration: none;
 }
-/* line 58, ../sass/module/custom/_base.scss */
+/* line 66, ../sass/module/custom/_base.scss */
 #mainheader figure {
   float: right;
   background: url(../img/logo.png) no-repeat center center;
@@ -665,7 +663,7 @@ body {
 /**
   * Footer definitions
   */
-/* line 69, ../sass/module/custom/_base.scss */
+/* line 77, ../sass/module/custom/_base.scss */
 footer {
   background-color: #555;
   color: silver;
