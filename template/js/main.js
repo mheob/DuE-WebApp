@@ -1,6 +1,6 @@
 // Browser Height
 onResize = function () {
-    $("#page").css("min-height", $(window).height() - $("footer").height());
+    $("#page").css("min-height", $(window).height() - $("footer").height() - 2);
 }
 $(document).ready(onResize);
 $(window).bind('resize', onResize);
