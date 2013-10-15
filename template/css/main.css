@@ -6,7 +6,7 @@
  * Correct `block` display not defined in IE 8/9.
  */
 /* line 10, ../sass/module/_normalize.scss */
-article, aside, details, figcaption, figure, footer, header, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
   display: block;
 }
 
