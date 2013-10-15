@@ -283,7 +283,7 @@ class Form
         $out .= '" placeholder="' . $this->lang->get("Weight.Form.mm") . '" pattern="[0-9]*[.,]?[0-9]+" required>' . "\n";
         $out .= "\t\t    " . '<label for="mat">' . $this->lang->get("Weight.Form.material") . '</label>' . "\n";
         $specialweight = array(
-            ''                                       => '',
+            '&nbsp;'                                 => '',
             $this->lang->get("Weight.Form.mat_al")   => '2.8',
             $this->lang->get("Weight.Form.mat_pb")   => '9.5',
             $this->lang->get("Weight.Form.mat_cusn") => '8.91',

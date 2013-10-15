@@ -157,7 +157,9 @@ class Page
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
     <title>' . $this->lang->get("Page.Header.title") . '</title>
     <meta name="description" content="' . $this->lang->get("Page.Header.description") . '">
     <meta name="viewport" content="width=device-width, initial-scale=1">

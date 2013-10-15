@@ -160,7 +160,7 @@ class Form
         /* preparations selectbox */
         /* MILLING */
         $hourlyRateMill = array(
-            ''                                                         => '',
+            '&nbsp;'                                                   => '',
             $this->lang->get("Calculation.Form.millEasy")              => '70.00',
             $this->lang->get("Calculation.Form.millComplex")           => '92.00',
             $this->lang->get("Calculation.Form.mill5AxesWithStaff")    => '135.00',
@@ -170,7 +170,7 @@ class Form
 
         /* LATHE */
         $hourlyRateLathe = array(
-            ''                                                          => '',
+            '&nbsp;'                                                    => '',
             $this->lang->get("Calculation.Form.latheEasy")              => '70.00',
             $this->lang->get("Calculation.Form.latheComplex")           => '92.00',
             $this->lang->get("Calculation.Form.latheBarLoader")         => '39.00',
@@ -315,7 +315,7 @@ class Form
     private function author()
     {
         $authors = array(
-            ''                                              => '',
+            '&nbsp;'                                        => '',
             $this->lang->get("Calculation.Form.author.cd")  => 'cd',
             $this->lang->get("Calculation.Form.author.khe") => 'khe',
             $this->lang->get("Calculation.Form.author.gk")  => 'gk',
@@ -340,7 +340,7 @@ class Form
     private function buttons()
     {
         $out = "\t\t" . '<div id="buttons">' . "\n";
-        $out .= "\t\t    " . '<input type="button" id="print" value="' . $this->lang->get("Calculation.Form.print") .'">' . "\n";
+        $out .= "\t\t    " . '<input type="button" id="print" value="' . $this->lang->get("Calculation.Form.print") . '">' . "\n";
         $out .= "\t\t    " . '<input type="submit" value="' . $this->lang->get("Calculation.Form.submit") . '">' . "\n";
         $out .= "\t\t    " . '<input type="reset" id="reset" value="' . $this->lang->get("Calculation.Form.reset") . '">' . "\n";
         $out .= "\t\t    " . '<input type="hidden" name="call" value="1">' . "\n";
