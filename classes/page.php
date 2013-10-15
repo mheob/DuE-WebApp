@@ -196,15 +196,15 @@ class Page
                 <li><a href="index.php?main=calculation">' . $this->lang->get('Page.Header.nav_text1') . '</a></li>
                 <li><a href="index.php?main=weights-calculator">' . $this->lang->get('Page.Header.nav_text2') . '</a>
                     <ul>
-                        <li><a href="index.php?main=weights-calculator&shape=fs">' . $this->lang->get("Weight.Output.fs") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=shs">' . $this->lang->get("Weight.Output.shs") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=rhs">' . $this->lang->get("Weight.Output.rhs") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=chs">' . $this->lang->get("Weight.Output.chs") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=rs">' . $this->lang->get("Weight.Output.rs") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=hs">' . $this->lang->get("Weight.Output.hs") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=us">' . $this->lang->get("Weight.Output.us") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=ss">' . $this->lang->get("Weight.Output.ss") . '</a></li>
-                        <li><a href="index.php?main=weights-calculator&shape=as">' . $this->lang->get("Weight.Output.as") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=fs">' . $this->lang->get("Weight.Output.fs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=shs">' . $this->lang->get("Weight.Output.shs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=rhs">' . $this->lang->get("Weight.Output.rhs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=chs">' . $this->lang->get("Weight.Output.chs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=rs">' . $this->lang->get("Weight.Output.rs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=hs">' . $this->lang->get("Weight.Output.hs") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=us">' . $this->lang->get("Weight.Output.us") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;shape=ss">' . $this->lang->get("Weight.Output.ss") . '</a></li>
+                        <li><a href="index.php?main=weights-calculator&amp;sshape=as">' . $this->lang->get("Weight.Output.as") . '</a></li>
                     </ul>
                 </li>
                 <li><a href="index.php?main=machinedata">' . $this->lang->get('Page.Header.nav_text3') . '</a></li>

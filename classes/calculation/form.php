@@ -161,22 +161,22 @@ class Form
         /* MILLING */
         $hourlyRateMill = array(
             ''                                                         => '',
-            $this->lang->get("Calculation.Form.millEasy")              => '70',
-            $this->lang->get("Calculation.Form.millComplex")           => '92',
-            $this->lang->get("Calculation.Form.mill5AxesWithStaff")    => '135',
-            $this->lang->get("Calculation.Form.mill5AxesWithoutStaff") => '71'
+            $this->lang->get("Calculation.Form.millEasy")              => '70.00',
+            $this->lang->get("Calculation.Form.millComplex")           => '92.00',
+            $this->lang->get("Calculation.Form.mill5AxesWithStaff")    => '135.00',
+            $this->lang->get("Calculation.Form.mill5AxesWithoutStaff") => '71.00'
         );
         //if (isset($_POST['milling']) ? $this->milling = $_POST['milling'] : $this->milling = '') ;
 
         /* LATHE */
         $hourlyRateLathe = array(
             ''                                                          => '',
-            $this->lang->get("Calculation.Form.latheEasy")              => '70',
-            $this->lang->get("Calculation.Form.latheComplex")           => '92',
-            $this->lang->get("Calculation.Form.latheBarLoader")         => '39',
-            $this->lang->get("Calculation.Form.lathe7AxesWithStaff")    => '117',
-            $this->lang->get("Calculation.Form.lathe7AxesWithoutStaff") => '104',
-            $this->lang->get("Calculation.Form.lathe7AxesBarLoader")    => '66'
+            $this->lang->get("Calculation.Form.latheEasy")              => '70.00',
+            $this->lang->get("Calculation.Form.latheComplex")           => '92.00',
+            $this->lang->get("Calculation.Form.latheBarLoader")         => '39.00',
+            $this->lang->get("Calculation.Form.lathe7AxesWithStaff")    => '117.00',
+            $this->lang->get("Calculation.Form.lathe7AxesWithoutStaff") => '104.00',
+            $this->lang->get("Calculation.Form.lathe7AxesBarLoader")    => '66.00'
         );
         //if (isset($_POST['lathing']) ? $this->lathing = $_POST['lathing'] : $this->lathing = '') ;
 
@@ -269,7 +269,7 @@ class Form
 
                 if ($id == "mat-p")
                 {
-                    $out .= "\t\t\t" . '<input type="text" name="mat-p-extra" id="mat-p-extra" value';
+                    $out .= "\t\t\t" . '<input type="text" name="mat-p-extra" id="mat-p-extra" value="';
 
                     if (isset($_POST["mat-p-extra"]))
                     {
@@ -284,7 +284,7 @@ class Form
                 }
                 elseif ($id == "mat-t")
                 {
-                    $out .= "\t\t\t" . '<input type="text" name="mat-t-extra" id="mat-t-extra" value';
+                    $out .= "\t\t\t" . '<input type="text" name="mat-t-extra" id="mat-t-extra" value="';
 
                     if (isset($_POST["mat-t-extra"]))
                     {
@@ -340,7 +340,7 @@ class Form
     private function buttons()
     {
         $out = "\t\t" . '<div id="buttons">' . "\n";
-        $out .= "\t\t    " . '<button id="print">' . $this->lang->get("Calculation.Form.print") . '</button>' . "\n";
+        $out .= "\t\t    " . '<input type="button" id="print" value="' . $this->lang->get("Calculation.Form.print") .'">' . "\n";
         $out .= "\t\t    " . '<input type="submit" value="' . $this->lang->get("Calculation.Form.submit") . '">' . "\n";
         $out .= "\t\t    " . '<input type="reset" id="reset" value="' . $this->lang->get("Calculation.Form.reset") . '">' . "\n";
         $out .= "\t\t    " . '<input type="hidden" name="call" value="1">' . "\n";
@@ -356,7 +356,7 @@ class Form
      */
     public function formheader()
     {
-        return "\t    " . '<form name="calculation" id="calculation" action="' . $_SERVER['REQUEST_URI'] . '" method="post">' . "\n";
+        return "\t    " . '<form name="calculation-form" id="calculation-form" action="' . $_SERVER['REQUEST_URI'] . '" method="post">' . "\n";
     }
 
     public function formbody()
