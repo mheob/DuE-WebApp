@@ -229,7 +229,10 @@ class Page
             {
                 case 'calculation':
                     $this->slogan1 = $this->lang->get('Page.Header.nav_text1');
+                    $out .= "\t" . '<div id="calculation">' . "\n";
                     $this->output = new CALC\Output();
+                    $out .= $this->output->show();
+                    $out .= "\t" . '</div><!-- #calculation -->' . "\n";
                     break;
                 case 'weights-calculator':
                     $this->slogan1 = $this->lang->get('Page.Header.nav_text2');
@@ -244,6 +247,7 @@ class Page
                     {
                         $out .= $this->output->show('');
                     }
+
                     $out .= "\t" . '</div><!-- #weights-calculator -->' . "\n";
                     break;
                 case 'machinedata':
