@@ -292,6 +292,7 @@ class Page
     <script src="template/js/main.js"></script>
 
     <!-- Google Analytics -->
+    <!--
     <script>
         (function (b, o, i, l, e, r) {
             b.GoogleAnalyticsObject = l;
@@ -308,6 +309,7 @@ class Page
         ga(\'create\', \'' . $this->lang->get("Page.Footer.gacode") . '\');
         ga(\'send\', \'pageview\');
     </script>
+    -->
 </body>
 </html>';
 
